@@ -12,6 +12,16 @@ class Window(gui.Ui_MainWindow, QMainWindow):
         self.pushButton_2.hide()
         self.listWidget.itemClicked.connect(self.select_habit)
         self.create_habit.clicked.connect(self.create_new_habit)
+        self.pushButton_2.clicked.connect(self.update_habit)
+
+    def update_habit(self):
+        try:
+            habit = self.habits[self.listWidget.currentItem().text()]
+            habit["all"].append(str(habit["current"]))
+            habit["current"] = self.spinBox_5.value()
+            self.select_habit()
+        except Exception as error:
+            print(error)
 
     def select_habit(self):
         try:
