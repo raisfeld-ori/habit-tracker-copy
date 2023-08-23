@@ -12,7 +12,4 @@ needed for the project, which is just PyQt5 (since PyQt6 had an error in the des
 and i was lazy to fix it). if you're using linux then create an env
 using ```python -M venv env``` and then use ```env/bin/activate``` to activate it.
 after that, use ```pip install PyQt5`` to install PyQt5, and run ```python main.py``` to run it.
-<<<<<<< HEAD
-this should give a bunch of errors, but continue working regardless.
-=======
 this should give a bunch of errors, but continue working regardless.
