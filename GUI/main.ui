@@ -13,11 +13,110 @@
   <property name="font">
    <font>
     <family>Secular One</family>
-    <pointsize>12</pointsize>
+    <pointsize>11</pointsize>
    </font>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#centralwidget {background-color:rgba(20, 20, 20, 250);}
+#Form {background-color:rgba(20, 20, 20, 250);}
+QMainWindow{background-color:rgba(20, 20, 20, 250);}
+
+QWidget{
+	qproperty-alignment: 'AlignCenter';
+	color:rgba(249, 249, 249, 240);
+}
+
+QMenuBar{background-color:rgba(20, 20, 20, 250);}
+QMenu{background-color:rgba(20, 20, 20, 250);}
+QMenu::item:selected{background-color:rgba(229, 229, 229, 100);}
+QMenuBar::item:selected{background-color:rgba(229, 229, 229, 100);}
+QListWidget{background-color:rgba(20, 20, 20, 250);}
+QSpinBox{background-color:rgba(20, 20, 20, 250);}
+QSpinBox::up-arrow{}
+QSpinBox::down-arrow{}
+QSpinBox::hover{}
+
+QMenu::separator{height:5px; background-color:rgba(191, 191, 191, 100);}
+
+QComboBox {
+	color:rgba(193, 193, 193, 250);
+	background-color:rgba(29, 29, 29, 250);
+	border:none;
+}
+QComboBox QAbstractItemView{
+	color:rgba(193, 193, 193, 250);
+	background-color:rgba(29, 29, 29, 250);
+	border:none;
+	selection-background-color:rgba(102, 102, 102, 250);
+}
+QLineEdit {
+	color:rgba(193, 193, 193, 250);
+	background-color:rgba(29, 29, 29, 250);
+	border:none;
+}
+QTextEdit {
+	color:rgba(193, 193, 193, 250);
+	background-color:rgba(29, 29, 29, 250);
+	border:none;
+}
+QProgressBar {
+     border: 0px solid grey;
+     border-radius: 0px;
+     background-color:rgba(255, 255, 255, 0);
+	color:rgba(255, 255, 255, 0);
+ }
+QProgressBar::chunk
+{
+background-color: rgb(208, 46, 213);
+}
+QTableWidget {
+    background-color: rgba(29, 29, 29, 250);
+    color: rgba(193, 193, 193, 250);
+    gridline-color: rgba(0, 0, 0, 0);
+}
+
+QTableWidget::item {
+    padding: 4px;
+}
+
+QTableWidget::item:selected {
+    background-color: rgba(50, 50, 50, 250);
+}
+
+QTableWidget::item:focus {
+    background-color: rgba(70, 70, 70, 250);
+    outline: none;
+}
+
+QHeaderView::section {
+    background-color: rgba(50, 50, 50, 250);
+    color: rgba(193, 193, 193, 250);
+    padding: 4px;
+    border: none;
+}
+
+QHeaderView {
+    background-color: rgba(50, 50, 50, 250);
+    color: rgba(193, 193, 193, 250);
+    padding: 4px;
+    border: none;
+}
+
+QHeaderView::section:checked {
+    background-color: rgba(70, 70, 70, 250);
+}
+ QTableView QTableCornerButton::section {
+    background-color: rgba(50, 50, 50, 250);
+ }
+
+QPushButton{background-color:rgba(59, 59, 59, 250);}
+QPushButton:hover{background-color:rgba(107, 107, 107, 250);}</string>
+  </property>
+  <property name="locale">
+   <locale language="English" country="Israel"/>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -38,11 +137,18 @@
      </widget>
     </item>
     <item>
-     <widget class="QListWidget" name="listWidget"/>
+     <widget class="QListWidget" name="listWidget">
+      <property name="font">
+       <font>
+        <family>Secular One</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+     </widget>
     </item>
     <item>
      <layout class="QGridLayout" name="gridLayout_2">
-      <item row="2" column="0">
+      <item row="2" column="2">
        <widget class="QListWidget" name="listWidget_2">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Ignored">
@@ -50,54 +156,91 @@
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
-       </widget>
-      </item>
-      <item row="2" column="1" alignment="Qt::AlignLeft">
-       <widget class="QLabel" name="label_13">
-        <property name="text">
-         <string>previous amounts:</string>
+        <property name="font">
+         <font>
+          <family>Secular One</family>
+          <pointsize>11</pointsize>
+         </font>
         </property>
        </widget>
       </item>
-      <item row="3" column="0">
-       <widget class="Line" name="line_5">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="1">
+      <item row="3" column="2">
        <widget class="Line" name="line_4">
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
         </property>
        </widget>
       </item>
-      <item row="0" column="0" alignment="Qt::AlignRight">
+      <item row="3" column="1">
+       <widget class="Line" name="line_5">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
        <widget class="QLabel" name="current_habit">
+        <property name="font">
+         <font>
+          <family>Secular One</family>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
         <property name="text">
          <string/>
         </property>
        </widget>
       </item>
-      <item row="1" column="0" alignment="Qt::AlignRight">
+      <item row="1" column="2">
        <widget class="QLabel" name="current_amount">
+        <property name="font">
+         <font>
+          <family>Secular One</family>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
         <property name="text">
          <string/>
         </property>
        </widget>
       </item>
-      <item row="1" column="1" alignment="Qt::AlignLeft">
+      <item row="0" column="1" alignment="Qt::AlignRight">
+       <widget class="QLabel" name="label_8">
+        <property name="font">
+         <font>
+          <family>Segoe UI Black</family>
+          <pointsize>11</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>selected habit:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" alignment="Qt::AlignRight">
        <widget class="QLabel" name="label_9">
+        <property name="font">
+         <font>
+          <family>Secular One</family>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
         <property name="text">
          <string>the current amount for the habit:</string>
         </property>
        </widget>
       </item>
-      <item row="0" column="1" alignment="Qt::AlignLeft">
-       <widget class="QLabel" name="label_8">
+      <item row="2" column="1" alignment="Qt::AlignRight">
+       <widget class="QLabel" name="label_13">
+        <property name="font">
+         <font>
+          <family>Secular One</family>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
         <property name="text">
-         <string>selected habit:</string>
+         <string>previous amounts:</string>
         </property>
        </widget>
       </item>
@@ -105,20 +248,32 @@
     </item>
     <item>
      <layout class="QGridLayout" name="gridLayout_3">
-      <item row="0" column="0">
-       <widget class="QSpinBox" name="spinBox_5"/>
-      </item>
-      <item row="0" column="1" alignment="Qt::AlignLeft">
+      <item row="0" column="1" alignment="Qt::AlignRight">
        <widget class="QLabel" name="label_14">
+        <property name="font">
+         <font>
+          <family>Secular One</family>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
         <property name="text">
          <string>updated amount:</string>
         </property>
        </widget>
       </item>
+      <item row="0" column="2">
+       <widget class="QSpinBox" name="spinBox_5"/>
+      </item>
      </layout>
     </item>
     <item>
      <widget class="QPushButton" name="pushButton_2">
+      <property name="font">
+       <font>
+        <family>Secular One</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string>update the habit</string>
       </property>
@@ -135,6 +290,12 @@
      <layout class="QGridLayout" name="gridLayout">
       <item row="3" column="0" alignment="Qt::AlignHCenter">
        <widget class="QLabel" name="label_7">
+        <property name="font">
+         <font>
+          <family>Secular One</family>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
         <property name="text">
          <string>select the normal, low and high amouts for this habit:</string>
         </property>
@@ -142,6 +303,12 @@
       </item>
       <item row="5" column="0" alignment="Qt::AlignHCenter">
        <widget class="QLabel" name="label_10">
+        <property name="font">
+         <font>
+          <family>Secular One</family>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
         <property name="text">
          <string>select the starting amount for the habit:</string>
         </property>
@@ -161,32 +328,50 @@
        </widget>
       </item>
       <item row="6" column="0" alignment="Qt::AlignHCenter">
-       <widget class="QSpinBox" name="spinBox_4"/>
+       <widget class="QSpinBox" name="start_amout"/>
       </item>
       <item row="1" column="0" alignment="Qt::AlignHCenter|Qt::AlignBottom">
        <widget class="QLabel" name="label_3">
+        <property name="font">
+         <font>
+          <family>Secular One</family>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
         <property name="text">
          <string>select a name for the habit</string>
         </property>
        </widget>
       </item>
       <item row="7" column="0">
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QPushButton" name="create_habit">
+        <property name="font">
+         <font>
+          <family>Secular One</family>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
         <property name="text">
          <string>create a habit</string>
         </property>
        </widget>
       </item>
       <item row="2" column="0">
-       <widget class="QLineEdit" name="lineEdit"/>
+       <widget class="QLineEdit" name="habit_name"/>
       </item>
       <item row="4" column="0">
        <layout class="QHBoxLayout" name="horizontalLayout">
         <item>
-         <widget class="QSpinBox" name="spinBox_3"/>
+         <widget class="QSpinBox" name="high_amout"/>
         </item>
-        <item alignment="Qt::AlignLeft">
+        <item>
          <widget class="QLabel" name="label_6">
+          <property name="font">
+           <font>
+            <family>Secular One</family>
+            <pointsize>11</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>high amount:</string>
           </property>
@@ -200,7 +385,20 @@
          </widget>
         </item>
         <item>
-         <widget class="QSpinBox" name="spinBox_2"/>
+         <widget class="QLabel" name="label_5">
+          <property name="font">
+           <font>
+            <family>Secular One</family>
+            <pointsize>11</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>normal amount:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="normal_amout"/>
         </item>
         <item>
          <widget class="Line" name="line_2">
@@ -209,29 +407,21 @@
           </property>
          </widget>
         </item>
-        <item alignment="Qt::AlignLeft">
-         <widget class="QLabel" name="label_5">
-          <property name="text">
-           <string>normal amount:</string>
-          </property>
-         </widget>
-        </item>
         <item>
-         <widget class="Line" name="line">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QSpinBox" name="spinBox"/>
-        </item>
-        <item alignment="Qt::AlignLeft">
          <widget class="QLabel" name="label_4">
+          <property name="font">
+           <font>
+            <family>Secular One</family>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>low amount:</string>
           </property>
          </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="low_amout"/>
         </item>
        </layout>
       </item>

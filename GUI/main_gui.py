@@ -17,8 +17,103 @@ class Ui_MainWindow(object):
         MainWindow.resize(1016, 811)
         font = QtGui.QFont()
         font.setFamily("Secular One")
-        font.setPointSize(12)
+        font.setPointSize(11)
         MainWindow.setFont(font)
+        MainWindow.setStyleSheet("#centralwidget {background-color:rgba(20, 20, 20, 250);}\n"
+"#Form {background-color:rgba(20, 20, 20, 250);}\n"
+"QMainWindow{background-color:rgba(20, 20, 20, 250);}\n"
+"\n"
+"QWidget{\n"
+"    qproperty-alignment: \'AlignCenter\';\n"
+"    color:rgba(249, 249, 249, 240);\n"
+"}\n"
+"\n"
+"QMenuBar{background-color:rgba(20, 20, 20, 250);}\n"
+"QMenu{background-color:rgba(20, 20, 20, 250);}\n"
+"QMenu::item:selected{background-color:rgba(229, 229, 229, 100);}\n"
+"QMenuBar::item:selected{background-color:rgba(229, 229, 229, 100);}\n"
+"QListWidget{background-color:rgba(20, 20, 20, 250);}\n"
+"QSpinBox{background-color:rgba(20, 20, 20, 250);}\n"
+"QSpinBox::up-arrow{}\n"
+"QSpinBox::down-arrow{}\n"
+"QSpinBox::hover{}\n"
+"\n"
+"QMenu::separator{height:5px; background-color:rgba(191, 191, 191, 100);}\n"
+"\n"
+"QComboBox {\n"
+"    color:rgba(193, 193, 193, 250);\n"
+"    background-color:rgba(29, 29, 29, 250);\n"
+"    border:none;\n"
+"}\n"
+"QComboBox QAbstractItemView{\n"
+"    color:rgba(193, 193, 193, 250);\n"
+"    background-color:rgba(29, 29, 29, 250);\n"
+"    border:none;\n"
+"    selection-background-color:rgba(102, 102, 102, 250);\n"
+"}\n"
+"QLineEdit {\n"
+"    color:rgba(193, 193, 193, 250);\n"
+"    background-color:rgba(29, 29, 29, 250);\n"
+"    border:none;\n"
+"}\n"
+"QTextEdit {\n"
+"    color:rgba(193, 193, 193, 250);\n"
+"    background-color:rgba(29, 29, 29, 250);\n"
+"    border:none;\n"
+"}\n"
+"QProgressBar {\n"
+"     border: 0px solid grey;\n"
+"     border-radius: 0px;\n"
+"     background-color:rgba(255, 255, 255, 0);\n"
+"    color:rgba(255, 255, 255, 0);\n"
+" }\n"
+"QProgressBar::chunk\n"
+"{\n"
+"background-color: rgb(208, 46, 213);\n"
+"}\n"
+"QTableWidget {\n"
+"    background-color: rgba(29, 29, 29, 250);\n"
+"    color: rgba(193, 193, 193, 250);\n"
+"    gridline-color: rgba(0, 0, 0, 0);\n"
+"}\n"
+"\n"
+"QTableWidget::item {\n"
+"    padding: 4px;\n"
+"}\n"
+"\n"
+"QTableWidget::item:selected {\n"
+"    background-color: rgba(50, 50, 50, 250);\n"
+"}\n"
+"\n"
+"QTableWidget::item:focus {\n"
+"    background-color: rgba(70, 70, 70, 250);\n"
+"    outline: none;\n"
+"}\n"
+"\n"
+"QHeaderView::section {\n"
+"    background-color: rgba(50, 50, 50, 250);\n"
+"    color: rgba(193, 193, 193, 250);\n"
+"    padding: 4px;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QHeaderView {\n"
+"    background-color: rgba(50, 50, 50, 250);\n"
+"    color: rgba(193, 193, 193, 250);\n"
+"    padding: 4px;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QHeaderView::section:checked {\n"
+"    background-color: rgba(70, 70, 70, 250);\n"
+"}\n"
+" QTableView QTableCornerButton::section {\n"
+"    background-color: rgba(50, 50, 50, 250);\n"
+" }\n"
+"\n"
+"QPushButton{background-color:rgba(59, 59, 59, 250);}\n"
+"QPushButton:hover{background-color:rgba(107, 107, 107, 250);}")
+        MainWindow.setLocale(QtCore.QLocale(QtCore.QLocale.English, QtCore.QLocale.Israel))
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
@@ -32,6 +127,10 @@ class Ui_MainWindow(object):
         self.label.setObjectName("label")
         self.verticalLayout.addWidget(self.label)
         self.listWidget = QtWidgets.QListWidget(self.centralwidget)
+        font = QtGui.QFont()
+        font.setFamily("Secular One")
+        font.setPointSize(14)
+        self.listWidget.setFont(font)
         self.listWidget.setObjectName("listWidget")
         self.verticalLayout.addWidget(self.listWidget)
         self.gridLayout_2 = QtWidgets.QGridLayout()
@@ -42,46 +141,79 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.listWidget_2.sizePolicy().hasHeightForWidth())
         self.listWidget_2.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setFamily("Secular One")
+        font.setPointSize(11)
+        self.listWidget_2.setFont(font)
         self.listWidget_2.setObjectName("listWidget_2")
-        self.gridLayout_2.addWidget(self.listWidget_2, 2, 0, 1, 1)
-        self.label_13 = QtWidgets.QLabel(self.centralwidget)
-        self.label_13.setObjectName("label_13")
-        self.gridLayout_2.addWidget(self.label_13, 2, 1, 1, 1, QtCore.Qt.AlignLeft)
-        self.line_5 = QtWidgets.QFrame(self.centralwidget)
-        self.line_5.setFrameShape(QtWidgets.QFrame.HLine)
-        self.line_5.setFrameShadow(QtWidgets.QFrame.Sunken)
-        self.line_5.setObjectName("line_5")
-        self.gridLayout_2.addWidget(self.line_5, 3, 0, 1, 1)
+        self.gridLayout_2.addWidget(self.listWidget_2, 2, 2, 1, 1)
         self.line_4 = QtWidgets.QFrame(self.centralwidget)
         self.line_4.setFrameShape(QtWidgets.QFrame.HLine)
         self.line_4.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line_4.setObjectName("line_4")
-        self.gridLayout_2.addWidget(self.line_4, 3, 1, 1, 1)
+        self.gridLayout_2.addWidget(self.line_4, 3, 2, 1, 1)
+        self.line_5 = QtWidgets.QFrame(self.centralwidget)
+        self.line_5.setFrameShape(QtWidgets.QFrame.HLine)
+        self.line_5.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line_5.setObjectName("line_5")
+        self.gridLayout_2.addWidget(self.line_5, 3, 1, 1, 1)
         self.current_habit = QtWidgets.QLabel(self.centralwidget)
+        font = QtGui.QFont()
+        font.setFamily("Secular One")
+        font.setPointSize(11)
+        self.current_habit.setFont(font)
         self.current_habit.setText("")
         self.current_habit.setObjectName("current_habit")
-        self.gridLayout_2.addWidget(self.current_habit, 0, 0, 1, 1, QtCore.Qt.AlignRight)
+        self.gridLayout_2.addWidget(self.current_habit, 0, 2, 1, 1)
         self.current_amount = QtWidgets.QLabel(self.centralwidget)
+        font = QtGui.QFont()
+        font.setFamily("Secular One")
+        font.setPointSize(11)
+        self.current_amount.setFont(font)
         self.current_amount.setText("")
         self.current_amount.setObjectName("current_amount")
-        self.gridLayout_2.addWidget(self.current_amount, 1, 0, 1, 1, QtCore.Qt.AlignRight)
-        self.label_9 = QtWidgets.QLabel(self.centralwidget)
-        self.label_9.setObjectName("label_9")
-        self.gridLayout_2.addWidget(self.label_9, 1, 1, 1, 1, QtCore.Qt.AlignLeft)
+        self.gridLayout_2.addWidget(self.current_amount, 1, 2, 1, 1)
         self.label_8 = QtWidgets.QLabel(self.centralwidget)
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Black")
+        font.setPointSize(11)
+        font.setBold(True)
+        self.label_8.setFont(font)
         self.label_8.setObjectName("label_8")
-        self.gridLayout_2.addWidget(self.label_8, 0, 1, 1, 1, QtCore.Qt.AlignLeft)
+        self.gridLayout_2.addWidget(self.label_8, 0, 1, 1, 1, QtCore.Qt.AlignRight)
+        self.label_9 = QtWidgets.QLabel(self.centralwidget)
+        font = QtGui.QFont()
+        font.setFamily("Secular One")
+        font.setPointSize(11)
+        self.label_9.setFont(font)
+        self.label_9.setObjectName("label_9")
+        self.gridLayout_2.addWidget(self.label_9, 1, 1, 1, 1, QtCore.Qt.AlignRight)
+        self.label_13 = QtWidgets.QLabel(self.centralwidget)
+        font = QtGui.QFont()
+        font.setFamily("Secular One")
+        font.setPointSize(11)
+        self.label_13.setFont(font)
+        self.label_13.setObjectName("label_13")
+        self.gridLayout_2.addWidget(self.label_13, 2, 1, 1, 1, QtCore.Qt.AlignRight)
         self.verticalLayout.addLayout(self.gridLayout_2)
         self.gridLayout_3 = QtWidgets.QGridLayout()
         self.gridLayout_3.setObjectName("gridLayout_3")
+        self.label_14 = QtWidgets.QLabel(self.centralwidget)
+        font = QtGui.QFont()
+        font.setFamily("Secular One")
+        font.setPointSize(11)
+        self.label_14.setFont(font)
+        self.label_14.setObjectName("label_14")
+        self.gridLayout_3.addWidget(self.label_14, 0, 1, 1, 1, QtCore.Qt.AlignRight)
         self.spinBox_5 = QtWidgets.QSpinBox(self.centralwidget)
         self.spinBox_5.setObjectName("spinBox_5")
-        self.gridLayout_3.addWidget(self.spinBox_5, 0, 0, 1, 1)
-        self.label_14 = QtWidgets.QLabel(self.centralwidget)
-        self.label_14.setObjectName("label_14")
-        self.gridLayout_3.addWidget(self.label_14, 0, 1, 1, 1, QtCore.Qt.AlignLeft)
+        self.gridLayout_3.addWidget(self.spinBox_5, 0, 2, 1, 1)
         self.verticalLayout.addLayout(self.gridLayout_3)
         self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
+        font = QtGui.QFont()
+        font.setFamily("Secular One")
+        font.setPointSize(11)
+        self.pushButton_2.setFont(font)
         self.pushButton_2.setObjectName("pushButton_2")
         self.verticalLayout.addWidget(self.pushButton_2)
         self.line_6 = QtWidgets.QFrame(self.centralwidget)
@@ -92,9 +224,17 @@ class Ui_MainWindow(object):
         self.gridLayout = QtWidgets.QGridLayout()
         self.gridLayout.setObjectName("gridLayout")
         self.label_7 = QtWidgets.QLabel(self.centralwidget)
+        font = QtGui.QFont()
+        font.setFamily("Secular One")
+        font.setPointSize(11)
+        self.label_7.setFont(font)
         self.label_7.setObjectName("label_7")
         self.gridLayout.addWidget(self.label_7, 3, 0, 1, 1, QtCore.Qt.AlignHCenter)
         self.label_10 = QtWidgets.QLabel(self.centralwidget)
+        font = QtGui.QFont()
+        font.setFamily("Secular One")
+        font.setPointSize(11)
+        self.label_10.setFont(font)
         self.label_10.setObjectName("label_10")
         self.gridLayout.addWidget(self.label_10, 5, 0, 1, 1, QtCore.Qt.AlignHCenter)
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
@@ -104,53 +244,68 @@ class Ui_MainWindow(object):
         self.label_2.setFont(font)
         self.label_2.setObjectName("label_2")
         self.gridLayout.addWidget(self.label_2, 0, 0, 1, 1, QtCore.Qt.AlignHCenter)
-        self.spinBox_4 = QtWidgets.QSpinBox(self.centralwidget)
-        self.spinBox_4.setObjectName("spinBox_4")
-        self.gridLayout.addWidget(self.spinBox_4, 6, 0, 1, 1, QtCore.Qt.AlignHCenter)
+        self.start_amout = QtWidgets.QSpinBox(self.centralwidget)
+        self.start_amout.setObjectName("start_amout")
+        self.gridLayout.addWidget(self.start_amout, 6, 0, 1, 1, QtCore.Qt.AlignHCenter)
         self.label_3 = QtWidgets.QLabel(self.centralwidget)
+        font = QtGui.QFont()
+        font.setFamily("Secular One")
+        font.setPointSize(11)
+        self.label_3.setFont(font)
         self.label_3.setObjectName("label_3")
         self.gridLayout.addWidget(self.label_3, 1, 0, 1, 1, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignBottom)
-        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setObjectName("pushButton")
-        self.gridLayout.addWidget(self.pushButton, 7, 0, 1, 1)
-        self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit.setObjectName("lineEdit")
-        self.gridLayout.addWidget(self.lineEdit, 2, 0, 1, 1)
+        self.create_habit = QtWidgets.QPushButton(self.centralwidget)
+        font = QtGui.QFont()
+        font.setFamily("Secular One")
+        font.setPointSize(11)
+        self.create_habit.setFont(font)
+        self.create_habit.setObjectName("create_habit")
+        self.gridLayout.addWidget(self.create_habit, 7, 0, 1, 1)
+        self.habit_name = QtWidgets.QLineEdit(self.centralwidget)
+        self.habit_name.setObjectName("habit_name")
+        self.gridLayout.addWidget(self.habit_name, 2, 0, 1, 1)
         self.horizontalLayout = QtWidgets.QHBoxLayout()
         self.horizontalLayout.setObjectName("horizontalLayout")
-        self.spinBox_3 = QtWidgets.QSpinBox(self.centralwidget)
-        self.spinBox_3.setObjectName("spinBox_3")
-        self.horizontalLayout.addWidget(self.spinBox_3)
+        self.high_amout = QtWidgets.QSpinBox(self.centralwidget)
+        self.high_amout.setObjectName("high_amout")
+        self.horizontalLayout.addWidget(self.high_amout)
         self.label_6 = QtWidgets.QLabel(self.centralwidget)
+        font = QtGui.QFont()
+        font.setFamily("Secular One")
+        font.setPointSize(11)
+        self.label_6.setFont(font)
         self.label_6.setObjectName("label_6")
-        self.horizontalLayout.addWidget(self.label_6, 0, QtCore.Qt.AlignLeft)
+        self.horizontalLayout.addWidget(self.label_6)
         self.line_3 = QtWidgets.QFrame(self.centralwidget)
         self.line_3.setFrameShape(QtWidgets.QFrame.VLine)
         self.line_3.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line_3.setObjectName("line_3")
         self.horizontalLayout.addWidget(self.line_3)
-        self.spinBox_2 = QtWidgets.QSpinBox(self.centralwidget)
-        self.spinBox_2.setObjectName("spinBox_2")
-        self.horizontalLayout.addWidget(self.spinBox_2)
+        self.label_5 = QtWidgets.QLabel(self.centralwidget)
+        font = QtGui.QFont()
+        font.setFamily("Secular One")
+        font.setPointSize(11)
+        self.label_5.setFont(font)
+        self.label_5.setObjectName("label_5")
+        self.horizontalLayout.addWidget(self.label_5)
+        self.normal_amout = QtWidgets.QSpinBox(self.centralwidget)
+        self.normal_amout.setObjectName("normal_amout")
+        self.horizontalLayout.addWidget(self.normal_amout)
         self.line_2 = QtWidgets.QFrame(self.centralwidget)
         self.line_2.setFrameShape(QtWidgets.QFrame.VLine)
         self.line_2.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line_2.setObjectName("line_2")
         self.horizontalLayout.addWidget(self.line_2)
-        self.label_5 = QtWidgets.QLabel(self.centralwidget)
-        self.label_5.setObjectName("label_5")
-        self.horizontalLayout.addWidget(self.label_5, 0, QtCore.Qt.AlignLeft)
-        self.line = QtWidgets.QFrame(self.centralwidget)
-        self.line.setFrameShape(QtWidgets.QFrame.VLine)
-        self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
-        self.line.setObjectName("line")
-        self.horizontalLayout.addWidget(self.line)
-        self.spinBox = QtWidgets.QSpinBox(self.centralwidget)
-        self.spinBox.setObjectName("spinBox")
-        self.horizontalLayout.addWidget(self.spinBox)
         self.label_4 = QtWidgets.QLabel(self.centralwidget)
+        font = QtGui.QFont()
+        font.setFamily("Secular One")
+        font.setPointSize(9)
+        self.label_4.setFont(font)
         self.label_4.setObjectName("label_4")
-        self.horizontalLayout.addWidget(self.label_4, 0, QtCore.Qt.AlignLeft)
+        self.horizontalLayout.addWidget(self.label_4)
+        self.low_amout = QtWidgets.QSpinBox(self.centralwidget)
+        self.low_amout.setObjectName("low_amout")
+        self.horizontalLayout.addWidget(self.low_amout)
         self.gridLayout.addLayout(self.horizontalLayout, 4, 0, 1, 1)
         self.verticalLayout.addLayout(self.gridLayout)
         MainWindow.setCentralWidget(self.centralwidget)
@@ -162,16 +317,16 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.label.setText(_translate("MainWindow", "welcome back"))
-        self.label_13.setText(_translate("MainWindow", "previous amounts:"))
-        self.label_9.setText(_translate("MainWindow", "the current amount for the habit:"))
         self.label_8.setText(_translate("MainWindow", "selected habit:"))
+        self.label_9.setText(_translate("MainWindow", "the current amount for the habit:"))
+        self.label_13.setText(_translate("MainWindow", "previous amounts:"))
         self.label_14.setText(_translate("MainWindow", "updated amount:"))
         self.pushButton_2.setText(_translate("MainWindow", "update the habit"))
         self.label_7.setText(_translate("MainWindow", "select the normal, low and high amouts for this habit:"))
         self.label_10.setText(_translate("MainWindow", "select the starting amount for the habit:"))
         self.label_2.setText(_translate("MainWindow", "create a new habit"))
         self.label_3.setText(_translate("MainWindow", "select a name for the habit"))
-        self.pushButton.setText(_translate("MainWindow", "create a habit"))
+        self.create_habit.setText(_translate("MainWindow", "create a habit"))
         self.label_6.setText(_translate("MainWindow", "high amount:"))
         self.label_5.setText(_translate("MainWindow", "normal amount:"))
         self.label_4.setText(_translate("MainWindow", "low amount:"))
